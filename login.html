@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log in — SmartRent Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="auth-shell">
+
+  <!-- Art panel -->
+  <div class="auth-art">
+    <a href="index.html" class="brand">
+      <span class="block-mark">
+        <span class="lit"></span><span></span><span class="deep"></span>
+        <span></span><span class="lit"></span><span></span>
+        <span class="deep"></span><span></span><span class="lit"></span>
+      </span>
+      <span>SmartRent Portal<span class="brand-sub">Adana Property Managers</span></span>
+    </a>
+
+    <div>
+      <div class="facade" id="auth-facade" aria-hidden="true" style="background: transparent; padding:0;"></div>
+    </div>
+
+    <div>
+      <p class="lede" style="color: var(--green-150); max-width: 34ch;">
+        "Tenants no longer have to walk to the office to pay rent or ask for a
+        balance — it's all on the portal now."
+      </p>
+      <p class="mono" style="color: var(--green-300); font-size:.8rem;">— Admin office, Adana Apartments</p>
+    </div>
+  </div>
+
+  <!-- Form panel -->
+  <div class="auth-form">
+    <div class="auth-form-inner">
+
+      <div class="role-switch" role="radiogroup" aria-label="Login as">
+        <input type="radio" name="role" id="role-tenant" value="tenant" checked>
+        <label for="role-tenant">Tenant</label>
+        <input type="radio" name="role" id="role-manager" value="manager">
+        <label for="role-manager">Manager</label>
+        <input type="radio" name="role" id="role-admin" value="admin">
+        <label for="role-admin">Admin</label>
+      </div>
+
+      <h2 id="login-title">Tenant login</h2>
+      <p id="login-sub" class="muted" style="margin-bottom:28px;">Sign in to view your balance and pay rent.</p>
+
+      <form id="login-form" action="#" method="post">
+        <div class="field">
+          <label for="username">Username or phone number</label>
+          <input type="text" id="username" name="username" placeholder="e.g. 0712 000 450" required>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required>
+        </div>
+        <div class="flex-between" style="margin-bottom:24px;">
+          <label class="flex gap-8" style="font-size:.85rem; color:var(--ink-soft); font-weight:500;">
+            <input type="checkbox" style="width:auto;"> Remember me
+          </label>
+          <a href="#" class="mono" style="font-size:.82rem; color:var(--clay);">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Log in</button>
+      </form>
+
+      <hr class="divider">
+
+      <p class="center muted" style="font-size:.9rem;">
+        New tenant? <a href="register.html" style="color:var(--green-700); font-weight:600;">Create an account</a>
+      </p>
+      <p class="center" style="margin-top:24px;">
+        <a href="index.html" class="mono" style="font-size:.8rem; color:var(--ink-faint);">&larr; Back to home</a>
+      </p>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+  // Demo only — route to the right dashboard. Replace with real auth later.
+  document.getElementById('login-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    const role = document.querySelector('.role-switch input:checked').value;
+    if(role === 'manager' || role === 'admin'){
+      window.location.href = 'manager-dashboard.html';
+    } else {
+      window.location.href = 'tenant-dashboard.html';
+    }
+  });
+</script>
+</body>
+</html>
