@@ -9,20 +9,20 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+ 
 <div class="auth-shell">
-
+ 
   <!-- Art panel -->
   <div class="auth-art">
     <a href="index.html" class="brand">
-   
+      <span class="block-mark">
+        <span class="lit"></span><span></span><span class="deep"></span>
+        <span></span><span class="lit"></span><span></span>
+        <span class="deep"></span><span></span><span class="lit"></span>
+      </span>
       <span>SmartRent Portal<span class="brand-sub">Adana Property Managers</span></span>
     </a>
-
-    <div>
-      <div class="facade" id="auth-facade" aria-hidden="true" style="background: transparent; padding:0;"></div>
-    </div>
-
+ 
     <div>
       <p class="lede" style="color: var(--green-150); max-width: 34ch;">
         "Tenants no longer have to walk to the office to pay rent or ask for a
@@ -31,11 +31,11 @@
       <p class="mono" style="color: var(--green-300); font-size:.8rem;">— Admin office, Adana Apartments</p>
     </div>
   </div>
-
+ 
   <!-- Form panel -->
   <div class="auth-form">
     <div class="auth-form-inner">
-
+ 
       <div class="role-switch" role="radiogroup" aria-label="Login as">
         <input type="radio" name="role" id="role-tenant" value="tenant" checked>
         <label for="role-tenant">Tenant</label>
@@ -44,10 +44,10 @@
         <input type="radio" name="role" id="role-admin" value="admin">
         <label for="role-admin">Admin</label>
       </div>
-
+ 
       <h2 id="login-title">Tenant login</h2>
       <p id="login-sub" class="muted" style="margin-bottom:28px;">Sign in to view your balance and pay rent.</p>
-
+ 
       <form id="login-form" action="#" method="post">
         <div class="field">
           <label for="username">Username or phone number</label>
@@ -65,21 +65,21 @@
         </div>
         <button type="submit" class="btn btn-primary btn-block">Log in</button>
       </form>
-
+ 
       <hr class="divider">
-
+ 
       <p class="center muted" style="font-size:.9rem;">
         New tenant? <a href="register.html" style="color:var(--green-700); font-weight:600;">Create an account</a>
       </p>
       <p class="center" style="margin-top:24px;">
         <a href="index.html" class="mono" style="font-size:.8rem; color:var(--ink-faint);">&larr; Back to home</a>
       </p>
-
+ 
     </div>
   </div>
-
+ 
 </div>
-
+ 
 <script src="script.js"></script>
 <script>
   // Demo only — route to the right dashboard. Replace with real auth later.
