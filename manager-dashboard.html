@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager Dashboard — SmartRent Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <a href="index.html" class="brand">
+      <span class="block-mark">
+        <span class="lit"></span><span></span><span class="deep"></span>
+        <span></span><span class="lit"></span><span></span>
+        <span class="deep"></span><span></span><span class="lit"></span>
+      </span>
+      <span>SmartRent<span class="brand-sub">Manager</span></span>
+    </a>
+
+    <a href="manager-dashboard.html" class="side-link active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+      <span class="label-text">Dashboard</span>
+    </a>
+    <a href="manager-dashboard.html#tenants" class="side-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 3-5.5 6.5-5.5s6.5 1.9 6.5 5.5"/><circle cx="17.5" cy="8.5" r="2.5"/><path d="M16 14.2c2.7.4 4.5 2 4.5 5.3"/></svg>
+      <span class="label-text">Tenants</span>
+    </a>
+    <a href="manager-dashboard.html#properties" class="side-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-7h6v7"/></svg>
+      <span class="label-text">Properties</span>
+    </a>
+    <a href="manager-dashboard.html#payments" class="side-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+      <span class="label-text">Payments</span>
+    </a>
+    <a href="manager-dashboard.html#reports" class="side-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 19v-6"/><path d="M12 19V9"/><path d="M16 19v-3"/></svg>
+      <span class="label-text">Reports</span>
+    </a>
+    <a href="notifications.html" class="side-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+      <span class="label-text">Notifications</span>
+    </a>
+
+    <div class="side-foot">
+      <a href="login.html" class="side-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+        <span class="label-text">Log out</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <div class="main">
+
+    <header class="topbar">
+      <div>
+        <p class="eyebrow" style="margin-bottom:4px;">Adana Property Managers</p>
+        <h3 style="margin:0;">Good morning, Peter</h3>
+      </div>
+      <div class="flex gap-12">
+        <button class="btn btn-secondary btn-sm" data-open-modal="announce-modal">Make announcement</button>
+        <a href="#reports" class="btn btn-primary btn-sm">Generate report</a>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- Stat row -->
+      <div class="grid grid-3" style="margin-bottom:32px;">
+        <div class="stat">
+          <div class="stat-label">Collected this month</div>
+          <div class="stat-value mono">KES 462,500</div>
+          <div class="stat-foot">Across 38 active tenants</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Overdue accounts</div>
+          <div class="stat-value mono" style="color:var(--clay);">18</div>
+          <div class="stat-foot">Across Blocks A–E</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Occupancy</div>
+          <div class="stat-value mono">92%</div>
+          <div class="stat-foot">3 vacant units</div>
+        </div>
+      </div>
+
+      <!-- System alerts -->
+      <div class="card card-soft" style="margin-bottom:32px;">
+        <div class="flex-between" style="margin-bottom:14px;">
+          <h4 style="margin:0;">System alerts</h4>
+          <span class="tag tag-muted">Today</span>
+        </div>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:12px;">
+          <li class="flex gap-12"><span class="tag tag-danger">Overdue</span> 18 tenants have overdue payments this cycle.</li>
+          <li class="flex gap-12"><span class="tag tag-success">Backup</span> System backup completed successfully at 02:00.</li>
+          <li class="flex gap-12"><span class="tag tag-muted">New tenant</span> Kevin Otieno registered for Block D-04.</li>
+        </ul>
+      </div>
+
+      <!-- Tenant table -->
+      <div id="tenants" class="flex-between" style="margin-bottom:14px;">
+        <h3 style="margin:0;">Manage all tenants</h3>
+        <div class="flex gap-12">
+          <input type="search" placeholder="Search by name or unit…" style="padding:9px 14px; border:1px solid var(--line); border-radius:999px; font-size:.85rem; min-width:220px;">
+          <a href="register.html" class="btn btn-primary btn-sm">+ Add tenant</a>
+        </div>
+      </div>
+      <div class="table-wrap" style="margin-bottom:32px;">
+        <table>
+          <thead>
+            <tr><th>Tenant</th><th>Unit</th><th>Phone</th><th class="num">Balance (KES)</th><th>Status</th><th>Action</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Doe</td><td class="mono">A-12</td><td class="mono">0712 000450</td>
+              <td class="num mono">0</td><td><span class="tag tag-success">Paid</span></td>
+              <td><a href="#" style="color:var(--green-700); font-weight:600;">View &rsaquo;</a></td>
+            </tr>
+            <tr>
+              <td>Faith Mwangi</td><td class="mono">C-03</td><td class="mono">0791 222622</td>
+              <td class="num mono">12,500</td><td><span class="tag tag-warning">Due</span></td>
+              <td><a href="#" style="color:var(--green-700); font-weight:600;">View &rsaquo;</a></td>
+            </tr>
+            <tr>
+              <td>Peter Kimani</td><td class="mono">E-07</td><td class="mono">0720 444444</td>
+              <td class="num mono">25,000</td><td><span class="tag tag-danger">Overdue</span></td>
+              <td><a href="#" style="color:var(--green-700); font-weight:600;">View &rsaquo;</a></td>
+            </tr>
+            <tr>
+              <td>Kevin Otieno</td><td class="mono">D-04</td><td class="mono">0733 119900</td>
+              <td class="num mono">8,000</td><td><span class="tag tag-warning">Due</span></td>
+              <td><a href="#" style="color:var(--green-700); font-weight:600;">View &rsaquo;</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Properties + Reports -->
+      <div class="grid grid-2">
+        <div id="properties">
+          <h3>Properties</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Block</th><th class="num">Units</th><th class="num">Occupied</th><th class="num">Rent (KES)</th></tr></thead>
+              <tbody>
+                <tr><td>Block A</td><td class="num mono">10</td><td class="num mono">10</td><td class="num mono">10,000</td></tr>
+                <tr><td>Block B</td><td class="num mono">8</td><td class="num mono">7</td><td class="num mono">11,000</td></tr>
+                <tr><td>Block C</td><td class="num mono">10</td><td class="num mono">9</td><td class="num mono">12,500</td></tr>
+                <tr><td>Block D</td><td class="num mono">6</td><td class="num mono">6</td><td class="num mono">9,500</td></tr>
+                <tr><td>Block E</td><td class="num mono">7</td><td class="num mono">6</td><td class="num mono">15,000</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="reports">
+          <h3>Reports &amp; exports</h3>
+          <div class="card" style="display:flex; flex-direction:column; gap:14px;">
+            <button class="btn btn-secondary btn-block">Monthly payment report</button>
+            <button class="btn btn-secondary btn-block">Occupancy report</button>
+            <button class="btn btn-secondary btn-block">Overdue accounts report</button>
+            <button class="btn btn-secondary btn-block">Export tenant data (CSV)</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============ ANNOUNCEMENT MODAL ============ -->
+<div class="modal-backdrop" id="announce-modal" hidden>
+  <div class="modal" style="position:relative;">
+    <button class="modal-close" data-close-modal aria-label="Close">&times;</button>
+    <p class="eyebrow">Notify tenants</p>
+    <h3>Make an announcement</h3>
+    <form id="announce-form">
+      <div class="field">
+        <label for="announce-audience">Send to</label>
+        <select id="announce-audience">
+          <option>All tenants</option>
+          <option>Block A</option>
+          <option>Block B</option>
+          <option>Block C</option>
+          <option>Block D</option>
+          <option>Block E</option>
+          <option>Tenants with overdue balances</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="announce-message">Message</label>
+        <textarea id="announce-message" rows="4" placeholder="e.g. Water will be unavailable on 17th from 8am–2pm for maintenance."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Send announcement</button>
+    </form>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+<script>
+  document.getElementById('announce-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('announce-modal').setAttribute('hidden','');
+    this.reset();
+  });
+</script>
+</body>
+</html>

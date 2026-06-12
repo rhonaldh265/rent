@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notifications &amp; Receipts — SmartRent Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <a href="index.html" class="brand">
+      <span class="block-mark">
+        <span class="lit"></span><span></span><span class="deep"></span>
+        <span></span><span class="lit"></span><span></span>
+        <span class="deep"></span><span></span><span class="lit"></span>
+      </span>
+      <span>SmartRent<span class="brand-sub">Notifications</span></span>
+    </a>
+
+    <a href="tenant-dashboard.html" class="side-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+      <span class="label-text">Tenant dashboard</span>
+    </a>
+    <a href="manager-dashboard.html" class="side-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-7h6v7"/></svg>
+      <span class="label-text">Manager dashboard</span>
+    </a>
+    <a href="notifications.html" class="side-link active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+      <span class="label-text">Notifications</span>
+    </a>
+
+    <div class="side-foot">
+      <a href="login.html" class="side-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+        <span class="label-text">Log out</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <div class="main">
+
+    <header class="topbar">
+      <div>
+        <p class="eyebrow" style="margin-bottom:4px;">Adana Apartments</p>
+        <h3 style="margin:0;">Notifications &amp; receipts</h3>
+      </div>
+      <span class="tag tag-muted">3 new</span>
+    </header>
+
+    <div class="content">
+
+      <div class="grid grid-2" style="grid-template-columns: 1.4fr 1fr; align-items:flex-start;">
+
+        <!-- Notification list -->
+        <div>
+          <h3 style="margin-bottom:14px;">Recent activity</h3>
+
+          <div class="card" style="margin-bottom:14px;">
+            <div class="flex-between">
+              <span class="tag tag-success">Payment successful</span>
+              <span class="mono muted" style="font-size:.8rem;">05-Oct-2025</span>
+            </div>
+            <p style="margin:10px 0 0;">
+              Payment of <strong class="mono">KES 12,500</strong> from
+              <strong>John Doe</strong> was received and confirmed.
+              <a href="#receipt" style="color:var(--green-700); font-weight:600;">View receipt &rsaquo;</a>
+            </p>
+          </div>
+
+          <div class="card" style="margin-bottom:14px;">
+            <div class="flex-between">
+              <span class="tag tag-danger">Overdue payment</span>
+              <span class="mono muted" style="font-size:.8rem;">3 days overdue</span>
+            </div>
+            <p style="margin:10px 0 0;">
+              <strong>Faith Mwangi</strong>'s balance of <strong class="mono">KES 12,500</strong>
+              is now 3 days overdue. A reminder has been sent automatically.
+            </p>
+          </div>
+
+          <div class="card" style="margin-bottom:14px;">
+            <div class="flex-between">
+              <span class="tag tag-muted">System notification</span>
+              <span class="mono muted" style="font-size:.8rem;">Scheduled: 17-Feb-2025</span>
+            </div>
+            <p style="margin:10px 0 0;">
+              Dear tenant, the water supply will be under maintenance on
+              17-Feb-2025. We'll notify you once it's restored.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="flex-between">
+              <span class="tag tag-success">New tenant registered</span>
+              <span class="mono muted" style="font-size:.8rem;">Today</span>
+            </div>
+            <p style="margin:10px 0 0;">
+              <strong>Kevin Otieno</strong> registered for unit
+              <strong class="mono">D-04</strong> and is awaiting first payment.
+            </p>
+          </div>
+        </div>
+
+        <!-- Receipt -->
+        <div id="receipt">
+          <h3 style="margin-bottom:14px;">Receipt</h3>
+          <div class="receipt">
+            <div class="flex-between" style="margin-bottom:16px;">
+              <div>
+                <strong style="font-family:var(--font-display); font-size:1.15rem; color:var(--green-900);">Adana Apartments</strong>
+                <div class="muted" style="font-family:var(--font-body); font-size:.8rem; margin-top:2px;">Block A, Ground Floor — Admin Office</div>
+              </div>
+              <span class="tag tag-success">Success</span>
+            </div>
+
+            <div class="receipt-row"><span class="label">Receipt no.</span><span>RNT-88421</span></div>
+            <div class="receipt-row"><span class="label">Tenant</span><span>John Doe</span></div>
+            <div class="receipt-row"><span class="label">Unit</span><span>Block A-12</span></div>
+            <div class="receipt-row"><span class="label">Date</span><span>05-Oct-2025</span></div>
+            <div class="receipt-row"><span class="label">Payment method</span><span>M-Pesa STK Push</span></div>
+            <div class="receipt-row"><span class="label">Status</span><span>Success</span></div>
+            <div class="receipt-row receipt-total"><span>Amount paid</span><span>KES 12,500</span></div>
+          </div>
+
+          <div class="flex gap-12" style="margin-top:16px;">
+            <button class="btn btn-secondary btn-sm" style="flex:1;">Download PDF</button>
+            <button class="btn btn-primary btn-sm" style="flex:1;">Print</button>
+          </div>
+
+          <div class="card card-soft" style="margin-top:24px;">
+            <h4 style="margin-top:0;">Notification preferences</h4>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:10px; font-size:.9rem;">
+              <li class="flex-between"><span>Payment confirmations</span><span class="tag tag-success">On</span></li>
+              <li class="flex-between"><span>Overdue reminders</span><span class="tag tag-success">On</span></li>
+              <li class="flex-between"><span>System &amp; maintenance updates</span><span class="tag tag-success">On</span></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
